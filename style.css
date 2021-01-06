@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.container .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 1;
+}
+
+.container .head img {
+    width: 13%;
+}
+
+.container .head a {
+    color: white;
+    background-color: red;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: linear-gradient(to bottom, black, transparent)
+}
+
+.banner:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: linear-gradient(to top, black, transparent)
+}
+
+.banner .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.banner .box .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .box .heading h2{
+    font-size: 3.2rem;
+    color: white;
+    width: 80%;
+   
+}
+
+.banner .box .heading h5 {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 0;
+    
+}
+
+.banner .box .heading p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500px;
+    padding: 15px 0;
+    padding-bottom: 20px;
+    
+}
+
+.banner .box .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .box .search input {
+    font-size: 14 px;
+    border: 1px solid grey;
+    outline: none;
+    color: red;
+    border-radius: 2px;
+    min-width: 400px;
+    height: 60px;
+    align-items: center;
+    padding: 10px 10px 0 0;
+}
+
+.banner .box .search a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    background: red;
+    box-shadow: 0 1px 0 grey;
+    font-size: 1.5rem;
+    line-height: 60px;
+    min-width: 310px;
+    padding: 0 30px;
+}
+
+.Enjoy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: .5rem solid darkslategrey;
+    margin: auto;
+}
+
+.Enjoy .tv {
+    width: 40%;
+}
+
+.Enjoy .tv h1 {
+    font-size: 3.1rem;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.Enjoy .tv p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.Enjoy .img {
+    width: 45%;
+}
+
+.Enjoy .img img {
+    width: 100%;
+}
+
+.Enjoy2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: .5rem solid darkslategrey;
+    margin: auto;
+}
+
+.list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.list h1{
+    color: white;
+    font-size: 3rem;
+    padding: 3rem 0 4rem 0;
+}
+
+.summary {
+    background: #303030;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+.icon {
+    width: 20px;
+    position: relative;
+}
+
+.icon::before, .icon::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    top: -1.5px;
+}
+
+.icon::after {
+    transform: rotate(90deg);
+    transition: .5s (linear);
+}
+
+.text {
+    background: #303030;
+    line-height: 35px;
+    margin: 3px 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 0;
+    opacity: 0;
+}
+
+.item:target .text {
+    opacity: 1;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0;
+    border-top: 2px solid black;
+    margin-bottom: 6px;
+}
+
+.item:target .icon::after {
+    transform: rotatey(90deg);
+}    
+
+.banner2 {
+    border-bottom:0.5rem solid #111;
+}
+
+.banner2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: linear-gradient(to bottom, black, transparent)
+}
+
+.banner2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: linear-gradient(to top, black, transparent)
+}
+
+.banner2 .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner2 .box {
+    margin: 4rem 0;
+
+}
+
+.banner2 .box .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner2 .box .heading h2{
+    font-size: 3.2rem;
+    color: white;
+    width: 80%;
+   
+}
+
+.banner2 .box .heading h5 {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 0;
+    
+}
+
+.banner2 .box .heading p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500px;
+    padding: 15px 0;
+    padding-bottom: 20px;
+    
+}
+
+.banner2 .box .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner2 .box .search input {
+    font-size: 14 px;
+    border: 1px solid grey;
+    outline: none;
+    color: red;
+    border-radius: 2px;
+    min-width: 400px;
+    height: 60px;
+    align-items: center;
+    padding: 10px 10px 0 0;
+}
+
+.banner2 .box .search a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    background: red;
+    box-shadow: 0 1px 0 grey;
+    font-size: 1.5rem;
+    line-height: 60px;
+    min-width: 310px;
+    padding: 0 30px;
+}
